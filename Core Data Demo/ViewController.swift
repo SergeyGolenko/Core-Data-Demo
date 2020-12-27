@@ -18,9 +18,13 @@ class ViewController: UIViewController {
         let context = appDelegate?.persistentContainer.viewContext
          //create new user
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context!)
-        newUser.setValue("rob", forKey: "username")
+        newUser.setValue("Rob", forKey: "username")
         newUser.setValue("myparol", forKey: "password")
         newUser.setValue(31, forKey: "age")
+        
+        newUser.setValue("Sergey", forKey: "username")
+        newUser.setValue("3453636", forKey: "password")
+        newUser.setValue(56, forKey: "age")
         
         do {
             try context?.save()
